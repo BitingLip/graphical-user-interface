@@ -1,0 +1,27 @@
+:root {
+	font-size: 10px; /* 1rem value */
+}
+
+@media screen and (max-width: 768px) {
+	:root {
+		/* Adjust for tablets and smaller screens */
+		font-size: 9px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	:root {
+		/* Adjust for mobile screens */
+		font-size: 8px;
+	}
+}
+
+/* High DPI screens adjustments */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min--moz-device-pixel-ratio: 2),
+       only screen and (-o-min-device-pixel-ratio: 2/1),
+       only screen and (min-device-pixel-ratio: 2),
+       only screen and (min-resolution: 192dpi),
+       only screen and (min-resolution: 2dppx) {
+	/* Adjustments for high DPI screens if needed */
+}

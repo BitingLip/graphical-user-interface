@@ -1,0 +1,141 @@
+/* Import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Import Material Icons */
+@import url('material-icons/iconfont/material-icons.css');
+@import url('material-symbols/index.css');
+
+:root {
+	--font-primary: "Roboto", sans-serif;
+	--font-primary-size: 1rem;
+	--font-primary-weight: 400;
+	--font-primary-line-height: 1rem;
+	
+	/* Legacy font variables for existing components */
+	--bl-font-primary: var(--font-primary);
+	--bl-font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+	
+	/* Font Sizes */
+	--bl-font-size-xs: 0.75rem;    /* 12px */
+	--bl-font-size-sm: 0.875rem;   /* 14px */
+	--bl-font-size-md: var(--font-primary-size);       /* 16px */
+	--bl-font-size-lg: 1.125rem;   /* 18px */
+	--bl-font-size-xl: 1.25rem;    /* 20px */
+	--bl-font-size-2xl: 1.5rem;    /* 24px */
+	--bl-font-size-3xl: 1.875rem;  /* 30px */
+	--bl-font-size-4xl: 2.25rem;   /* 36px */
+	
+	/* Font Weights */
+	--bl-font-weight-light: 300;
+	--bl-font-weight-regular: var(--font-primary-weight);
+	--bl-font-weight-medium: 500;
+	--bl-font-weight-bold: 700;
+	
+	/* Line Heights */
+	--bl-line-height-tight: 1.25;
+  --bl-line-height-normal: 1.5;
+  --bl-line-height-relaxed: 1.75;
+  
+  /* Letter Spacing */
+  --bl-letter-spacing-tight: -0.025em;
+  --bl-letter-spacing-normal: 0;
+  --bl-letter-spacing-wide: 0.025em;
+}
+
+/* Typography Base Styles */
+body {
+  font-family: var(--bl-font-primary);
+  font-size: var(--bl-font-size-md);
+  line-height: var(--bl-line-height-normal);
+  color: var(--bl-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: var(--bl-font-size-3xl);
+  font-weight: var(--bl-font-weight-bold);
+  line-height: var(--bl-line-height-tight);
+  margin: 1.5rem 0 1rem;
+}
+
+h2 {
+  font-size: var(--bl-font-size-2xl);
+  font-weight: var(--bl-font-weight-bold);
+  line-height: var(--bl-line-height-tight);
+  margin: 1.25rem 0 0.875rem;
+}
+
+h3 {
+  font-size: var(--bl-font-size-xl);
+  font-weight: var(--bl-font-weight-medium);
+  line-height: var(--bl-line-height-tight);
+  margin: 1rem 0 0.75rem;
+}
+
+h4 {
+  font-size: var(--bl-font-size-lg);
+  font-weight: var(--bl-font-weight-medium);
+  line-height: var(--bl-line-height-tight);
+  margin: 0.875rem 0 0.625rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--bl-text-link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code, pre {
+  font-family: var(--bl-font-mono);
+  font-size: var(--bl-font-size-sm);
+  background-color: var(--bl-table-header-bg);
+  border-radius: 3px;
+}
+
+code {
+  padding: 0.2em 0.4em;
+}
+
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  line-height: 1.45;
+  margin: 0 0 1rem;
+}
+
+/* Material Icons Styling */
+.material-icons, .material-symbols-outlined {
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* Utility Text Classes */
+.text-xs { font-size: var(--bl-font-size-xs); }
+.text-sm { font-size: var(--bl-font-size-sm); }
+.text-md { font-size: var(--bl-font-size-md); }
+.text-lg { font-size: var(--bl-font-size-lg); }
+.text-xl { font-size: var(--bl-font-size-xl); }
+
+.font-light { font-weight: var(--bl-font-weight-light); }
+.font-regular { font-weight: var(--bl-font-weight-regular); }
+.font-medium { font-weight: var(--bl-font-weight-medium); }
+.font-bold { font-weight: var(--bl-font-weight-bold); }
+
+.text-primary { color: var(--bl-text-primary); }
+.text-secondary { color: var(--bl-text-secondary); }
+.text-tertiary { color: var(--bl-text-tertiary); }
+.text-disabled { color: var(--bl-text-disabled); }
+.text-link { color: var(--bl-text-link); }
+.text-success { color: var(--bl-success); }
+.text-warning { color: var(--bl-warning); }
+.text-error { color: var(--bl-error); }
+.text-info { color: var(--bl-info); }

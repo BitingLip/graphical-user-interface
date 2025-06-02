@@ -1,0 +1,266 @@
+body {
+	color: var(--shade-06);
+
+	font-family: var(--font-primary);
+	line-height: var(--font-primary-line-height);
+	font-weight: var(--font-primary-weight);
+
+	background: var(--shade-01);
+}
+
+.filter-title {
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+	border-bottom: 1px solid var(--shade-02);
+	padding-bottom: 0.3rem;
+}
+
+/* BUTTON */
+.button {
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: hidden;
+
+	background: transparent;
+	font-size: 1.2rem;
+	color: var(--shade-07);
+
+	border: 1px solid var(--shade-02);
+	box-shadow: var(--shadow-01);
+
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.button.big {
+	border-radius: 1rem;
+}
+
+.button.small {
+	border-radius: 0.75rem;
+}
+
+.button:hover {
+	background: var(--color-05);
+}
+
+.button.active {
+	background: var(--color-02);
+}
+
+.button.active:hover {
+	background: var(--color-01);
+}
+
+/* CONTENTPANE */
+.contentpane {
+	background: var(--shade-00);
+	border: 1px solid var(--shade-02);
+	border-radius: 1rem;
+	box-shadow: var(--shadow-01);
+	padding: 2rem;
+	margin: 1rem;
+}
+
+/* INPUT ELEMENTS */
+.input-field {
+	background: var(--shade-00);
+	border: 1px solid var(--shade-02);
+	border-radius: 0.5rem;
+	padding: 0.75rem 1rem;
+	color: var(--shade-06);
+	font-family: var(--font-primary);
+	font-size: var(--font-primary-size);
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-field:focus {
+	outline: none;
+	border-color: var(--color-01);
+	box-shadow: 0 0 0 3px var(--color-03);
+}
+
+.input-field::placeholder {
+	color: var(--shade-03);
+}
+
+/* CARDS */
+.card {
+	background: var(--shade-00);
+	border: 1px solid var(--shade-02);
+	border-radius: 1rem;
+	box-shadow: var(--shadow-01);
+	transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+	box-shadow: var(--shadow-02);
+}
+
+/* NAVIGATION */
+.nav-item {
+	color: var(--shade-04);
+	text-decoration: none;
+	padding: 0.75rem 1rem;
+	border-radius: 0.5rem;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.nav-item:hover {
+	background: var(--color-05);
+	color: var(--shade-06);
+}
+
+.nav-item.active {
+	background: var(--color-02);
+	color: var(--shade-07);
+}
+
+/* TABLES */
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	background: var(--shade-00);
+	border-radius: 0.5rem;
+	overflow: hidden;
+	box-shadow: var(--shadow-01);
+}
+
+.table th,
+.table td {
+	padding: 1rem;
+	text-align: left;
+	border-bottom: 1px solid var(--shade-02);
+}
+
+.table th {
+	background: var(--shade-01);
+	color: var(--shade-06);
+	font-weight: 500;
+}
+
+.table tr:hover {
+	background: var(--color-05);
+}
+
+/* MODALS */
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+}
+
+.modal-content {
+	background: var(--shade-00);
+	border-radius: 1rem;
+	box-shadow: var(--shadow-03);
+	max-width: 90vw;
+	max-height: 90vh;
+	overflow-y: auto;
+}
+
+/* BADGES */
+.badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.25rem 0.75rem;
+	border-radius: 1rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+
+.badge.primary {
+	background: var(--color-03);
+	color: var(--color-01);
+}
+
+.badge.success {
+	background: var(--bl-success-light);
+	color: var(--bl-success);
+}
+
+.badge.warning {
+	background: var(--bl-warning-light);
+	color: var(--bl-warning);
+}
+
+.badge.error {
+	background: var(--bl-error-light);
+	color: var(--bl-error);
+}
+
+/* UTILITIES */
+.text-primary {
+	color: var(--shade-06);
+}
+
+.text-secondary {
+	color: var(--shade-04);
+}
+
+.text-muted {
+	color: var(--shade-03);
+}
+
+.bg-primary {
+	background: var(--color-01);
+}
+
+.bg-secondary {
+	background: var(--shade-02);
+}
+
+.shadow-sm {
+	box-shadow: var(--shadow-00);
+}
+
+.shadow-md {
+	box-shadow: var(--shadow-01);
+}
+
+.shadow-lg {
+	box-shadow: var(--shadow-02);
+}
+
+.rounded {
+	border-radius: 0.5rem;
+}
+
+.rounded-lg {
+	border-radius: 1rem;
+}
+
+/* RESPONSIVE UTILITIES */
+@media screen and (max-width: 768px) {
+	.contentpane {
+		margin: 0.5rem;
+		padding: 1rem;
+	}
+	
+	.table th,
+	.table td {
+		padding: 0.5rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.modal-content {
+		margin: 1rem;
+		border-radius: 0.5rem;
+	}
+	
+	.contentpane {
+		margin: 0.25rem;
+		padding: 0.75rem;
+	}
+}

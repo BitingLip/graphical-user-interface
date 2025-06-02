@@ -1,0 +1,95 @@
+:root {
+	--app_sidenav_width: 24rem;
+	--app_sidenav_margin: 1rem;
+	--app_sidenav_margin_fault: 0.35rem;
+	--app_sidenav_border: 0.1rem;
+	--app_sidenav_rowgap: 1rem;
+	--app_sidenav_width_full: calc(var(--app_sidenav_width) + var(--app_sidenav_border) + 2 * var(--app_sidenav_margin));
+
+	--app_sidenav_button_amount: 6;
+	--app_sidenav_button_size: 5rem;
+	--app_sidebar_button_description_width: calc(var(--app_sidenav_width) - var(--app_sidenav_button_size));
+
+	--app_dashboard_header_height: 5rem;
+	--app_dashboard_header_margin: 1rem;
+	--app_dashboard_header_height_full: calc(var(--app_dashboard_header_height) + 2 * var(--app_dashboard_header_margin));
+
+	--app_dashboard_margin: 1rem;
+
+	--contentpane_margin: 5rem;
+}
+
+#app {
+	position: relative;
+	display: grid;
+	grid-template-columns: var(--app_sidenav_width_full) 1fr;
+	grid-template-rows: 1fr;
+	grid-column: auto;
+
+	width: 100vw;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+#app_sidenav {
+	grid-column: 1;
+	position: fixed;
+
+	display: grid;
+	grid-template-columns: var(--app_sidenav_width) + var(--app_sidenav_border);
+	grid-template-rows:
+		calc(var(--app_sidenav_rowgap) * (var(--app_sidenav_button_amount) - 1) + calc(var(--app_sidenav_button_size) * var(--app_sidenav_button_amount)))
+		1fr var(--app_sidenav_button_size);
+	padding: var(--app_dashboard_margin);
+}
+
+#app_sidenav_top {
+	display: flex;
+	flex-direction: column;
+	gap: var(--app_sidenav_rowgap);
+}
+
+#app_sidenav_bottom {
+	grid-row: 3;
+
+	display: flex;
+	flex-direction: column;
+	gap: var(--app_sidenav_rowgap);
+}
+
+#app_dashboard {
+	grid-column: 2;
+
+	display: block;
+	height: 100vh;
+	padding: var(--app_dashboard_margin);
+}
+
+/* Responsive layout adjustments */
+@media screen and (max-width: 768px) {
+	:root {
+		--app_sidenav_width: 20rem;
+		--app_sidenav_button_size: 4rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#app {
+		grid-template-columns: 1fr;
+	}
+	
+	#app_sidenav {
+		position: absolute;
+		z-index: 1000;
+		transform: translateX(-100%);
+		transition: transform 0.3s ease;
+	}
+	
+	#app_sidenav.open {
+		transform: translateX(0);
+	}
+	
+	#app_dashboard {
+		grid-column: 1;
+	}
+}

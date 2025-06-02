@@ -1,0 +1,86 @@
+:root {
+	/* SHADING */
+	--shade-00: #1f1f1f;
+	--shade-01: #242424;
+	--shade-02: #5151512d;
+	--shade-03: #ffffff56;
+	--shade-04: #ffffff7f;
+	--shade-06: #e4e4e4;
+	--shade-07: #ffffff;
+
+    --logo-00: #ffffff;
+
+	/* COLORS */
+	--color-01: #2a7bbd;
+	--color-02: #2f85d688;
+	--color-03: #2f85d64c;
+	--color-04: #4b82b83f;
+	--color-05: #626b7549;
+
+	/* SHADOWS */
+	--shadow-00: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+	--shadow-01: 0 0 0.75rem rgba(0, 0, 0, 0.3);
+	--shadow-02: 0 0 1rem rgba(0, 0, 0, 0.4);
+	--shadow-03: 0 0 5rem rgba(0, 0, 0, 0.45);
+
+	/* Legacy mapping for existing components */
+	--bl-blue: var(--color-01);
+	--bl-blue-dark: #1f5f99;
+	--bl-blue-light: var(--color-02);
+	--bl-accent: #ff6b6b;
+	--bl-accent-dark: #ff4040;
+	--bl-accent-light: #ff9a9a;
+	--bl-background: var(--shade-01);
+	--bl-surface: var(--shade-00);
+	--bl-border: var(--shade-02);
+	--bl-divider: var(--shade-02);
+	--bl-text-primary: var(--shade-06);
+	--bl-text-secondary: var(--shade-04);
+	--bl-text-tertiary: var(--shade-03);
+	--bl-text-placeholder: var(--shade-03);
+	--bl-text-disabled: var(--shade-03);
+	--bl-text-link: var(--color-01);
+	--bl-success: #22863a;
+	--bl-success-light: #e6ffed;
+	--bl-warning: #f9c513;
+	--bl-warning-light: #fff5b1;
+	--bl-error: #d73a49;
+	--bl-error-light: #ffeef0;
+	--bl-info: var(--color-01);
+	--bl-info-light: var(--color-03);
+	--bl-button-primary: var(--color-01);
+	--bl-button-primary-hover: #1f5f99;
+	--bl-button-secondary: var(--shade-02);
+	--bl-button-secondary-hover: var(--color-05);
+	--bl-shadow-small: var(--shadow-00);
+	--bl-shadow-medium: var(--shadow-01);
+	--bl-shadow-large: var(--shadow-02);
+	--bl-nav-background: var(--shade-00);
+	--bl-nav-text: var(--shade-06);	--bl-nav-active: var(--shade-07);
+}
+
+[data-theme="light"] {
+	/* SHADING */
+	--shade-00: #ffffff;
+	--shade-01: #f9f9f9;
+	--shade-02: #d3d3d3c2;
+	--shade-03: #808080;
+	--shade-04: #555555;
+	--shade-06: #424242;
+	--shade-07: #000000;
+
+    --logo-00: #ffffff;
+
+	/* COLORS */
+	--color-02: #80bcf5be;
+	--color-01: #88bbeb88;
+	--color-03: #78b2e74c;
+	--color-04: #6996c43f;
+	--color-05: #6d7f9449;
+
+	/* SHADOWS */
+	--shadow-00: 0 0 0.5rem rgba(0, 0, 0, 0.02);
+	--shadow-01: 0 0 0.75rem rgba(0, 0, 0, 0.05);
+	--shadow-02: 0 0 1rem rgba(0, 0, 0, 0.05);
+	--shadow-03: 0 0 5rem rgba(0, 0, 0, 0.3);
+}
